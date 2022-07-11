@@ -32,6 +32,9 @@ server {
 ```
 server{
 
+        listen 80;
+        listen [::]:80;
+
         root /var/www/cdn.guihon.cm;
 
         index index.html;
@@ -41,6 +44,7 @@ server{
                 try_files $uri $uri/ = 404;
         }
 }
+
 
 
 
