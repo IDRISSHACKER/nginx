@@ -27,3 +27,21 @@ server {
 }
 ```
 
+## react-js server
+
+```
+server{
+
+        root /var/www/cdn.guihon.cm;
+
+        index index.html;
+        server_name cdn.guihon.cm www.cdn.guihon.cm;
+
+        location / {
+                try_files $uri $uri/ = 404;
+        }
+}
+
+
+
+```
