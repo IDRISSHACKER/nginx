@@ -49,3 +49,44 @@ server{
 
 
 ```
+## floralux.guihon.cm
+
+```
+server{
+
+        root /var/www/floralux.guihon.cm;
+
+        index index.html;
+        server_name floralux.guihon.cm www.floralux.guihon.cm;
+
+        location / {
+                try_files $uri $uri/ = 404;
+        }
+
+
+    listen [::]:443 ssl; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/floralux.guihon.cm/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/floralux.guihon.cm/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+server{
+    if ($host = floralux.guihon.cm) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+        listen 80;
+        listen [::]:80;
+        server_name floralux.guihon.cm www.floralux.guihon.cm;
+    return 404; # managed by Certbot
+
+
+}
+
+```
+
+
+
