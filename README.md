@@ -88,5 +88,10 @@ server{
 
 ```
 
+## Activate certificate tls/ssl
+``` sh
+sudo certbot --nginx -d example.com -d www.example.com
+```
+
 
 
