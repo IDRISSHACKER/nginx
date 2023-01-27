@@ -2,7 +2,7 @@
 my nginx sites-availables config default file
 
 ## node server
-```
+```nginx
 upstream mondomaine_fr {
     server localhost:4000;
 }
@@ -25,11 +25,11 @@ server {
     }
 
 }
-```
+```nginx
 
 ## react-js server
 
-```
+```nginx
 server{
 
         listen 80;
@@ -51,7 +51,7 @@ server{
 ```
 ## floralux.guihon.cm
 
-```
+```nginx
 server{
 
         root /var/www/floralux.guihon.cm;
@@ -89,8 +89,13 @@ server{
 ```
 
 ## Activate certificate tls/ssl
-``` sh
+```sh
 sudo certbot --nginx -d example.com -d www.example.com
+```
+
+## Delete Certificate
+```
+sudo certbot delete domain.com
 ```
 
 
