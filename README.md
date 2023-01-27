@@ -25,7 +25,7 @@ server {
     }
 
 }
-```nginx
+```
 
 ## react-js server
 
@@ -46,9 +46,8 @@ server{
 }
 
 
-
-
 ```
+
 ## floralux.guihon.cm
 
 ```nginx
@@ -94,7 +93,7 @@ sudo certbot --nginx -d example.com -d www.example.com
 ```
 
 ## Delete Certificate
-```
+``` bash
 sudo certbot delete domain.com
 ```
 
