@@ -88,12 +88,12 @@ server{
 ```
 
 ## Activate certificate tls/ssl
-```sh
+``` cmd
 sudo certbot --nginx -d example.com -d www.example.com
 ```
 
 ## Delete Certificate
-``` bash
+``` sh
 sudo certbot delete domain.com
 ```
 
