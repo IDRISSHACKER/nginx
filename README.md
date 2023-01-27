@@ -1,7 +1,7 @@
 # nginx
 my nginx sites-availables config default file
 
-## node server
+## Reverse proxy
 ```nginx
 upstream mondomaine_fr {
     server localhost:4000;
@@ -27,7 +27,7 @@ server {
 }
 ```
 
-## react-js server
+## static page
 
 ```nginx
 server{
@@ -48,7 +48,7 @@ server{
 
 ```
 
-## floralux.guihon.cm
+## static page with lets enscript
 
 ```nginx
 server{
